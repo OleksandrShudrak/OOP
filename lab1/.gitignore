@@ -1,0 +1,5 @@
+main.exe
+money.exe
+*.exe
+*.o
+.vscode/
