@@ -83,6 +83,8 @@ void handler(){
     cin >> triangle.B.y;
     cin >> triangle.C.x;
     cin >> triangle.C.y;
+    
+    cout << (triangle.area() == 0 ? "Трикутник вироджений\n" : "Трикутник не вироджений\n");
 
     cout << "Введіть кількість точок на яких буде здійснена перевірка приналежності до трикутника: ";
     int amountPoints;
