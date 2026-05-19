@@ -42,7 +42,8 @@ double Dyhotomia_class::Newtonmet(){
         double f_prime = pohidna(x);
 
         if (isnan(f_x) || isnan(f_prime) || abs(f_prime) < 1e-12) {
-            return NAN;
+          
+         return NAN;
         }
 
         dx = f_x / f_prime;
@@ -51,6 +52,7 @@ double Dyhotomia_class::Newtonmet(){
         iter++;
     }
    
+    cout << "Кількість ітерацій (Ньютона): " << iter << endl; 
     return x;
 }
 
@@ -63,6 +65,8 @@ double Dyhotomia_class::Dyhotomia(){
     if(isnan(fa) || isnan(fb) || fa * fb > 0){
         return NAN;
     }
+
+    int iter = 0;
 
     double c = (b_local + a_local) / 2;
     while((b_local - a_local) > eps){
@@ -77,7 +81,10 @@ double Dyhotomia_class::Dyhotomia(){
             fb = fc;
         }
         c = (b_local + a_local) / 2;
+
+        iter++;
     }
 
+    cout << "Кількість ітерацій (дихотомії): " << iter << endl;
     return c;
 }

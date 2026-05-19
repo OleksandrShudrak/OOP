@@ -11,7 +11,7 @@ int main(){
     SetConsoleOutputCP(65001);
 
     Dyhotomia_class dyh;
-    dyh.setVolums(0.5, 1);
+    dyh.setVolums(-1, 1);
     dyh.setTolerance(1e-9);
     cout << "Метод дихотомії: " << dyh.Dyhotomia() << endl;
     cout << "Метод Ньютона: " << dyh.Newtonmet() << endl;
